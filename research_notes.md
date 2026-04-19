@@ -3,13 +3,16 @@
 ## Day 1 Summary
 
 **What is open-to-close and why we chose it?**  
-Open-to-close return measures the price change from market open (9:30 AM) to close (4:00 PM) on the same day. We use it because it removes overnight/gap risk - news that hits while the market is closed can cause big jumps at the next open, which we cannot control. This makes the strategy cleaner and lower-risk for an intraday quant approach.
+Open-to-close return is the percentage change from the market open price (9:30 AM HKT) to the close price (4:00 PM HKT) on the same trading day. I chose it because it completely removes overnight/gap risk — big news can hit while the market is closed and cause the next day's open to jump up or down a lot, which we can't control. This makes the strategy much cleaner and lower risk, which is perfect for a simple quant intraday approach.
 
 **What does negative correlation mean for trading?**  
-The correlation between Sentiment and Daily_Return is negative (≈ -0.065). This means when the crowd is bullish (high Up votes), the HSI tends to perform worse that day, and when the crowd is bearish (high Down votes), the HSI tends to perform better. This is a classic contrarian signal - we can profit by doing the opposite of what social-media users vote.
+The correlation between the crowd Sentiment score and the actual Daily_Return is negative (around -0.065). That means when social media users are very bullish (high Up votes), the HSI actually tends to do slightly worse that day. When they are bearish (high Down votes), the HSI tends to do better. This is a classic contrarian signal — the crowd is often wrong at the extremes, so we can make money by going against the majority vote.
 
 **Explain compounding with your own example.**  
-Compounding is when returns build on previous returns. Example: If I make +1% every trading day for 252 days, simple addition gives +252%, but real compounding is (1 + 0.01)^252 - 1 ≈ +1,126%. Even small daily edges become huge over time when you reinvest the profits.
+Compounding is when your profits start earning profits too. For example, if I make +1% every trading day for 252 days, just adding them up gives +252%, but in reality the money grows much more because each day's gain is on the new higher amount. The formula (1 + 0.01)^252 - 1 gives about +1,126%. Even a small daily edge becomes huge over time when you let it compound.
 
 **One thing that still confuses you.**  
-I still want to understand how we add transaction costs and slippage in the backtest, and whether we should use a sentiment threshold (e.g. |Sentiment| > 0.2) instead of just >0.
+I still need to understand how we should handle transaction costs, slippage, and whether we should add a stronger threshold like |Sentiment| > 0.2 instead of just Sentiment < 0. Also, how would this strategy behave in different market regimes (bull vs bear market)?
+
+## Overall Reflection
+I started this project with zero knowledge of trading or sentiment analysis. After Day 1, I now understand why open-to-close is used, what contrarian sentiment means, and why compounding is so powerful in quant strategies. The boxplot clearly shows the edge, and I'm excited to build the full backtest in the next days for the DataLouder application.
