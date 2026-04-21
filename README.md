@@ -20,7 +20,7 @@ The strategy exploits the negative correlation between crowd sentiment and same-
 
 ### Strategy Highlights
 - **Signal**: Long only when crowd is bearish (Sentiment < 0)
-- **Horizon**: Intraday (open-to-close — no overnight gap risk)
+- **Horizon**: Intraday (open-to-close - no overnight gap risk)
 
 ### How to Run
 ```bash
