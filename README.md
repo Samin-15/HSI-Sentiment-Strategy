@@ -1,7 +1,7 @@
 # HSI Contrarian Social Media Sentiment Trading Strategy
 
 **Project for DataLouder Quant Trader / Research Engineer (Intern) Application**  
-**Candidate:** Samin Yasir  
+**Candidate:** Samin Yasir Chodhury
 **Date:** April 2026
 
 ### Overview
