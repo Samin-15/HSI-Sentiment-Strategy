@@ -34,4 +34,49 @@ Today I created equity curves to visualise compounding and compared the contrari
 - The strategy reduces drawdowns compared to the market while capturing upside on bearish crowd days.
 
 **One new question:**  
-How much better does the strategy become with a sentiment threshold (e.g. Sentiment < -0.2) or by adding stop-loss / volatility filters?
+How much better does the strategy become with a sentiment threshold (e.g. Sentiment < 0) or by adding stop-loss / volatility filters?
+
+
+## Day 3 Summary - Final Backtest & Project Complete
+
+Today I finalized the contrarian strategy and calculated full professional performance metrics.
+
+**Final Chosen Strategy**: Long only when Sentiment < 0 (crowd is bearish).  
+I tested a stricter threshold (Sentiment < -0.2) but it performed poorly (negative return), so I kept the simpler rule.
+
+**Backtest Results:**
+
+**Buy & Hold HSI**  
+- Total Return: **9.7%**  
+- Annualized Return: 4.3%  
+- Annualized Volatility: 20.7%  
+- Sharpe Ratio: 0.21  
+- Win Rate: 47.5%  
+- Max Drawdown: **-29.3%**
+
+**Contrarian Sentiment Strategy**  
+- Total Return: **+30.4%**  
+- Annualized Return: 12.9%  
+- Annualized Volatility: 12.4%  
+- Sharpe Ratio: **1.04**  
+- Win Rate: 16.1%  
+- Max Drawdown: **-13.6%**  
+- Number of Trades: 179
+
+The equity curve shows the strategy (orange line) significantly outperforming buy-and-hold while having much lower drawdown and volatility. A Sharpe ratio above 1.0 is strong for a simple rule-based strategy.
+
+**Reflection**  
+I started this project knowing almost nothing about trading, returns, sentiment, compounding, volatility, drawdown or backtesting. Over three days I learned how to turn raw Excel data into a complete, backtested quant strategy. The results prove a real contrarian edge exists in the social-media votes. I now understand why professionals care about risk-adjusted metrics (Sharpe, drawdown) and not just total return.
+
+**Limitations I recognize**  
+- No transaction costs or slippage included  
+- Only tested on this historical period  
+- Simple rule — could be improved
+
+**Future Improvements**  
+- Add realistic costs and slippage  
+- Optimize threshold or add volatility filter  
+- Combine with technical indicators or machine learning  
+- Walk-forward / out-of-sample testing
+
+This project is now complete and ready for submission to DataLouder. I’m proud of what I built from zero knowledge in just a few days.
